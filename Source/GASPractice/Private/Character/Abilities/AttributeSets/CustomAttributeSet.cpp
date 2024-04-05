@@ -5,7 +5,8 @@
 
 UCustomAttributeSet::UCustomAttributeSet()
 {
-	InitDamage(10.0f);
+	InitDamage(0.0f);
+	InitSpeed(600.0f);
 	InitHealth(100.0f);
 	InitMaxHealth(100.0f);
 }
