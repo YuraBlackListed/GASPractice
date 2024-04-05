@@ -20,11 +20,11 @@ class GASPRACTICE_API UCustomAttributeSet : public UAttributeSet
 public:
 	UCustomAttributeSet();
 
-	UPROPERTY(BlueprintReadOnly, Category = "Health")
-	FGameplayAttributeData Health;
+	UPROPERTY(BlueprintReadOnly, Category = "Bullets")
+	FGameplayAttributeData Bullets;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Health")
-	FGameplayAttributeData MaxHealth;
+	UPROPERTY(BlueprintReadOnly, Category = "Bullets")
+	FGameplayAttributeData MaxBullets;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Speed")
 	FGameplayAttributeData Speed;
@@ -33,10 +33,11 @@ public:
 	FGameplayAttributeData Damage;
 
 
-	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Health)
-	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxHealth)
+	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Bullets)
+	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxBullets)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Speed)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Damage)
 
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
 };
