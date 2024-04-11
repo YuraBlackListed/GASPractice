@@ -30,7 +30,9 @@ UDamageGEExecutionCalculation::UDamageGEExecutionCalculation()
 
 float UDamageGEExecutionCalculation::CalculateDamage(const float Damage, const float Armor) const
 {
-	return Damage-Armor;
+	/*FString DamageString = FString::Printf(TEXT("%f"), Damage);
+	UE_LOG(LogTemp, Warning, TEXT("%s"), *DamageString);*/
+	return Damage - Armor;
 }
 
 void UDamageGEExecutionCalculation::Execute_Implementation(const FGameplayEffectCustomExecutionParameters& ExecutionParams, FGameplayEffectCustomExecutionOutput& OutExecutionOutput) const
