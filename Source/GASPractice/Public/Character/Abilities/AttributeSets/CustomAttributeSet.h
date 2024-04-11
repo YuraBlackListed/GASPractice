@@ -19,6 +19,18 @@ class GASPRACTICE_API UCustomAttributeSet : public UAttributeSet
 	
 public:
 	UCustomAttributeSet();
+	
+	UPROPERTY(BlueprintReadOnly, Category = "Health")
+	FGameplayAttributeData Health;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Health")
+	FGameplayAttributeData MaxHealth;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Armor")
+		FGameplayAttributeData Armor;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Armor")
+		FGameplayAttributeData MaxArmor;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Bullets")
 	FGameplayAttributeData Bullets;
@@ -33,6 +45,10 @@ public:
 	FGameplayAttributeData Damage;
 
 
+	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Health)
+	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxHealth)
+	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Armor)
+	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxArmor)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Bullets)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxBullets)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Speed)
