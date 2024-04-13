@@ -7,6 +7,7 @@
 #include "AbilitySystemInterface.h"
 #include "AbilitySystemComponent.h"
 #include "AttributeSet.h"
+#include "Character/Abilities/CustomAbilitySystemComponent.h"
 #include "Character/Abilities/AttributeSets/CustomAttributeSet.h"
 #include "CustomCharacterBase.generated.h"
 
@@ -33,7 +34,7 @@ protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(BlueprintReadOnly)
-	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
+	TObjectPtr<UCustomAbilitySystemComponent> AbilitySystemComponent;
 
 	UPROPERTY(BlueprintReadOnly)
 	TObjectPtr<UAttributeSet> AttributeSet;

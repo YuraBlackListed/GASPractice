@@ -41,10 +41,6 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Speed")
 	FGameplayAttributeData Speed;
 
-	UPROPERTY(BlueprintReadOnly, Category = "Damage")
-	FGameplayAttributeData Damage;
-
-
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Health)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxHealth)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Armor)
@@ -52,7 +48,6 @@ public:
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Bullets)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, MaxBullets)
 	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Speed)
-	ATTRIBUTE_ACCESSORS(UCustomAttributeSet, Damage)
 
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;

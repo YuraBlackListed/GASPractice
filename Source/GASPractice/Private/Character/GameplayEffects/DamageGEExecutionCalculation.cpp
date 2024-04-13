@@ -9,10 +9,12 @@ UE_DEFINE_GAMEPLAY_TAG(TAG_CALCULATION_DAMAGE, "Calculation.Damage");
 struct FDamageStatistics
 {
 	FGameplayEffectAttributeCaptureDefinition DefenceDefinition;
+	FGameplayEffectAttributeCaptureDefinition DamageMultiplierDefinition;
 
 	FDamageStatistics()
 	{
 		DefenceDefinition = FGameplayEffectAttributeCaptureDefinition(UCustomAttributeSet::GetArmorAttribute(), EGameplayEffectAttributeCaptureSource::Target, true);
+		DamageMultiplierDefinition = FGameplayEffectAttributeCaptureDefinition(UCustomAttributeSet::GetDamageMultiplierAttribute(), EGameplayEffectAttributeCaptureSource::Source, true);
 	}
 };
 
@@ -26,6 +28,7 @@ static FDamageStatistics GetStatistics()
 UDamageGEExecutionCalculation::UDamageGEExecutionCalculation()
 {
 	RelevantAttributesToCapture.Add(GetStatistics().DefenceDefinition);
+	RelevantAttributesToCapture.Add(GetStatistics().DamageMultiplierDefinition);
 }
 
 float UDamageGEExecutionCalculation::CalculateDamage(const float Damage, const float Armor) const

@@ -3,6 +3,7 @@
 
 #include "Character/CustomCharacterBase.h"
 #include "Character/Abilities/AttributeSets/CustomAttributeSet.h"
+#include "Character/Abilities/CustomAbilitySystemComponent.h"
 
 // Sets default values
 ACustomCharacterBase::ACustomCharacterBase()
@@ -10,7 +11,7 @@ ACustomCharacterBase::ACustomCharacterBase()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>("AbilitySystemComponent");
+	AbilitySystemComponent = CreateDefaultSubobject<UCustomAbilitySystemComponent>("AbilitySystemComponent");
 	AttributeSet = CreateDefaultSubobject<UCustomAttributeSet>("AttributeSet");
 }
 

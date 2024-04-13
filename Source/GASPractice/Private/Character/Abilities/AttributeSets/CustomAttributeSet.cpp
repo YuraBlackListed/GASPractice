@@ -6,7 +6,6 @@
 
 UCustomAttributeSet::UCustomAttributeSet()
 {
-	InitDamage(0.0f);
 	InitSpeed(600.0f);
 	InitBullets(10.0f);
 	InitMaxBullets(100.0f);
