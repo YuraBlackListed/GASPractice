@@ -9,7 +9,7 @@ UCustomAttributeSet::UCustomAttributeSet()
 	InitSpeed(600.0f);
 	InitBullets(10.0f);
 	InitMaxBullets(100.0f);
-	InitHealth(90.0f);
+	InitHealth(60.0f);
 	InitMaxHealth(100.0f);
 	InitArmor(0.0f);
 	InitMaxArmor(100.0f);
